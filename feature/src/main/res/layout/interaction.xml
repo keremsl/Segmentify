@@ -26,7 +26,6 @@
             android:src="@drawable/info_icon"
             android:layout_gravity="right"
             android:padding="15dp"
-            android:background="null"
             />
         <ImageView
             android:layout_width="1100dp"
