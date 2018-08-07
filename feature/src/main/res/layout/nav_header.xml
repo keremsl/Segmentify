@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#dc3322"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginStart="-30dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="126dp"
+        android:layout_height="76dp"
+        android:src="@drawable/logo300">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/nav_name_surname_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kerem Ceylan"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="15sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:id="@+id/nav_mail_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mehmetkeremceylan@gmail.com"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="12sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+</LinearLayout>

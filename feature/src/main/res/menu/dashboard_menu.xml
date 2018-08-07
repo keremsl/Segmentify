@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_item_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item android:id="@+id/nav_item_reco"
+            android:icon="@drawable/reco"
+            android:title="Recommendations" />
+        <item android:id="@+id/nav_item_reports"
+            android:icon="@drawable/statics"
+            android:title="Reports" />
+        <item android:id="@+id/nav_item_sales"
+            android:icon="@drawable/sales"
+            android:title="Sales" />
+    </group>
+
+    <group android:id="@+id/group_menu">
+        <item android:id="@+id/nav_item_bannerify"
+            android:title="Bannerify" />
+        <item android:id="@+id/nav_item_trendify"
+            android:title="Trendify" />
+    </group>
+
+
+</menu>

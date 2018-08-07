@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="5dp"
+        android:padding="20dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="#66dfca"
+        >
+        <ImageView
+            android:id="@+id/website_pageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info_icon"
+            android:layout_gravity="right"
+            android:padding="15dp"
+            />
+        <ImageButton
+            android:contentDescription="Basket"
+            android:layout_width="1100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waves"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="20dp"
+            android:text="Device"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/mont"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_computer_black_24dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="20dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="PC"
+            android:textSize="13sp"
+            android:textColor="#459587"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="65dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="127,249"
+            android:textSize="21sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="65dp"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_tablet_mac_black_24dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="26dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="Tablet"
+            android:textSize="13sp"
+            android:textColor="#459587"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="215dp"
+            android:layout_marginStart="65dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="12,935"
+            android:textSize="21sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="65dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_smartphone_black_24dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="20dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="Mobile"
+            android:textSize="13sp"
+            android:textColor="#459587"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="65dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="82,249"
+            android:textSize="21sp"
+            android:textColor="#Ffff"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="165dp"
+            android:layout_marginStart="65dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_devices_other_black_24dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="21dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="Other"
+            android:textSize="13sp"
+            android:textColor="#459587"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="280dp"
+            android:layout_marginStart="65dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="12,935"
+            android:textSize="21sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="295dp"
+            android:layout_marginStart="65dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="%59.12"
+            android:textSize="15sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="105dp"
+            android:layout_marginStart="250dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="%5.12"
+            android:textSize="15sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="250dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="%77,21"
+            android:textSize="15sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="235dp"
+            android:layout_marginStart="250dp"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding ="10dp"
+            android:text="%59.12"
+            android:textSize="15sp"
+            android:textColor="#FFFF"
+            app:fontFamily="@font/mont"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="250dp"
+            />
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

@@ -13,4 +13,36 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string-array name="dashbord_menu_spinner">
+        <item>Segmentify Performance</item>
+        <item>Your Website</item>
+    </string-array>
+    <string name="dashboard_segmentify_performance">Segmentify Performance</string>
+    <string name="info_revenue">This box shows the statistics about products that are purchased through Segmentify Recommendation Widgets and the effect of those purchases over your website’s overall revenue.\n"
+                    "\n"
+                    <b>"Revenue</b>: Shows the total monetary amount of products sold through recommendation widgets. Segmentify only tracks the products clicked from the recommendation widgets in the same session. When a visitor buys 2 products with only one of them directed from a recommendation widget, Segmentify only adds that one product to its revenue contribution.\n"
+                    <b>"Purchases</b>: Shows the number of purchases that include at least one product directed from Segmentify Recommendation Widgets.\n"
+                    <b>"Purchased Products</b>: Shows the total number of products that are sold through Segmentify Recommendation Widgets. If a visitor buys two of the same product after clicking to it in a recommendation widget, it is counted as two items.\n"
+                    <b>"Conversion Rate</b>: The percentage of products that have been purchased after being clicked in a Segmentify Recommendation widget.}\n"
+                    <b>"Contribution Ratio</b>): Shows the ratio between Segmentify Recommendation Widgets’ contribution and the overall revenue. It is calculated by Revenue of the Widgets divided by Overall Revenue.\n"
+                    "Expected value for contribution ratio is between 7% to 12%. If the ratio is below this range, you should consider adding new recommendation widgets and personalization campaigns.</string>
+    <string name="info_widget">"This box shows the statistics about Segmentify Recommendation Widgets\n"
+            "\n"
+            <b>"Views</b>: Indicate the total number of recommendation widgets on your website that have actually been seen by your visitors.\n"
+            <b>"Impressions</b>: Indicates the total number of pageviews with a recommendation widget on the page. Whether the widget was seen by your visitor is irrelevant in this count.\n"
+            <b>"Impression Rate</b>: The ratio between the number of views of the recommendation widgets over the total amount of pageviews with widgets on the page. It is calculated by dividing Views to Impressions.\n"
+            "If this ratio is low, you should consider placing the recommendation widgets higher up on your page to increase the chances of it being scrolled into the visible area by your visitors."</string>
+    <string name="info_interaction">"\n"
+            "This box shows the statistics about user interaction with Segmentify Recommendation Widgets.\n"
+            "\n"
+            <b>"Clicks</b>: Shows how many times the products inside the recommendation widgets are clicked by your visitor.\n"
+            <b>"CTR</b>: Click-through rate shows the ratio between the number of clicks on a recommendation widget and the number of views by your visitors. It is calculated by dividing Clicks to Views.\n"
+            "If this ratio is low, you should consider changing the rules and filters of the recommendations."</string>
+    <string name="info_basket">This box shows the statistics about products that are added to the basket through Segmentify Recommendation Widgets.\n"
+        "\n"
+        <b>"Products</b>: Shows how many products are added to the basket through Segmentify Recommendation Widgets. This is the total number of items added to the basket. If a visitor adds two of the same product after clicking to a recommendation widget, it is counted as two items.\n"
+        <b>"Total Amount</b>: Shows the total monetary amount of items added to the basket through recommendation widgets\n"
+        <b>"Average Contribution</b>: Shows Segmentify Recommendation Widgets’ average amount of contribution to the basket. If a visitor clicks to a $100 priced product from a recommendation widget and buys that item, Segmentify’s contribution is increased by $100.\n"
+        <b>"Basket Rate</b>: Shows the ratio between the number of products that are added to the basket and the the number of products that are clicked through the recommendation widgets. It is calculated by dividing Products Added to the Basket to Products Clicked\n"
+        "If this ratio is low, you should consider updating the recommendation types and filters of the products to create the best match for visitor’s preferences.</string>
 </resources>

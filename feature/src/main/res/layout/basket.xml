@@ -4,20 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_margin="10dp"
-        app:cardCornerRadius="10dp"
-        android:padding="20dp"
-        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="5dp"
         app:cardPreventCornerOverlap="true"
         app:cardBackgroundColor="#49b4d3"
-        app:cardElevation="5dp"
         >
         <ImageView
+            android:id="@+id/info_basket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/info_icon"
@@ -36,12 +34,11 @@
             android:layout_height="wrap_content"
             android:padding ="10dp"
             android:text="Basket"
-            android:textSize="28dp"
+            android:textSize="28sp"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_View"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -53,7 +50,6 @@
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_View_TXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -70,43 +66,40 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="0"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:paddingTop="45dp"
             android:layout_gravity="center_horizontal"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_View_TXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="Total\nAmount"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:paddingTop="80dp"
             android:layout_gravity="start"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_Imp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="0"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:layout_gravity="end"
             android:paddingTop="45dp"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_Imp_TXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="Average\nCont."
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textAlignment="textEnd"
             android:layout_gravity="end"
             android:paddingTop="80dp"
@@ -114,25 +107,23 @@
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_Imp_Rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="Basket Rate"
-            android:textSize="20dp"
-            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:layout_gravity="start"
             android:paddingTop="140dp"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/Widget_Imp_Rate_TXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="%0.0"
-            android:textSize="25dp"
-            android:layout_gravity="right"
+            android:textSize="25sp"
+            android:layout_gravity="end"
             android:paddingTop="135dp"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
