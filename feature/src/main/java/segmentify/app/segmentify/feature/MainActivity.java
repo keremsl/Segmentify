@@ -1,6 +1,8 @@
 package segmentify.app.segmentify.feature;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +12,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -33,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     Context context = this;
     private DrawerLayout mDrawerLayout;
-    List<String> dashboard_spinner = new ArrayList<String>();
 
 
     @Override
@@ -42,8 +45,52 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.dashboard);
         setNavigationViewListener();
 
-        dashboard_spinner.add("Segmentify Performance");
-        dashboard_spinner.add("Website Performance");
+        final CardView thisMontCard = findViewById(R.id.card_interval_thisMonth);
+        final CardView yesterdayCard = findViewById(R.id.card_interval_yesterday);
+        final CardView todayCard = findViewById(R.id.card_interval_today);
+        final TextView txtView_month = findViewById(R.id.card_interval_thisMonth_txt);
+        final TextView txtView_yesterday = findViewById(R.id.card_interval_yesterday_txt);
+        final TextView txtView_today = findViewById(R.id.card_interval_today_txt);
+
+        /* CARD LISTENERS FOR RETRIEVING TIME INTERVAL DATA */
+
+        thisMontCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                thisMontCard.setCardBackgroundColor(Color.parseColor("#547494"));
+                txtView_month.setTextColor(Color.parseColor("#FFFFFF"));
+                yesterdayCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                todayCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                txtView_yesterday.setTextColor(Color.parseColor("#000000"));
+                txtView_today.setTextColor(Color.parseColor("#000000"));
+            }
+        });
+
+        todayCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                todayCard.setCardBackgroundColor(Color.parseColor("#547494"));
+                txtView_today.setTextColor(Color.parseColor("#FFFFFF"));
+                thisMontCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                yesterdayCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                txtView_yesterday.setTextColor(Color.parseColor("#000000"));
+                txtView_month.setTextColor(Color.parseColor("#000000"));
+            }
+        });
+
+        yesterdayCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yesterdayCard.setCardBackgroundColor(Color.parseColor("#547494"));
+                txtView_yesterday.setTextColor(Color.parseColor("#FFFFFF"));
+                todayCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                thisMontCard.setCardBackgroundColor(Color.parseColor("#e6e5f0"));
+                txtView_today.setTextColor(Color.parseColor("#000000"));
+                txtView_month.setTextColor(Color.parseColor("#000000"));
+            }
+        });
+
+        /* ------------------------------------------------*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
@@ -107,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 new MaterialDialog.Builder(context)
                         .title("Interaction")
-                        .content(R.string.info_interaction)                                              /* show info about interaction */
+                        .content(R.string.info_interaction)        /* show info about interaction */
                         .show();
             }
         });
