@@ -28,7 +28,8 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1">
+            android:stretchColumns="1"
+            >
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -36,12 +37,12 @@
                 android:layout_height="50dp"
                 android:background="#dc3322"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-           <!--     <android.support.v7.widget.AppCompatSpinner
-                    android:layout_width="wrap_content"
+                <Spinner
+                    android:id="@+id/segmentifyOryourwebsite_spn"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    >
-                    -->
-
+                    android:theme="@style/Base.Widget.AppCompat.Spinner"
+                    />
             </android.support.v7.widget.Toolbar>
 
             <android.support.v7.widget.Toolbar
@@ -126,26 +127,67 @@
                 layout="@layout/widget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"></include>
+                android:layout_marginTop="25dp"
+                android:id="@+id/IsgmWidget"
+                android:visibility="gone"
+                />
 
             <include
                 layout="@layout/interaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"></include>
+                android:layout_marginTop="10dp"
+                android:id="@+id/IsgmInteraction"
+                android:visibility="gone"
+                />
 
             <include
-                android:id="@+id/basketBase"
+                android:id="@+id/IsgmBasket"
                 layout="@layout/basket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"></include>
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                />
 
             <include
                 layout="@layout/revenue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"></include>
+                android:layout_marginTop="10dp"
+                android:id="@+id/IsgmRevenue"
+                android:visibility="gone"
+                />
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/website_pageview"
+                android:layout_marginTop="25dp"
+                android:id="@+id/IwebsitePageView"
+                />
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/website_device"
+                android:layout_marginTop="10dp"
+                android:id="@+id/IwebsiteDevice"
+                />
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/website_visitors"
+                android:layout_marginTop="10dp"
+                android:id="@+id/IwebsiteVisitors"
+                />
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/website_revenue"
+                android:layout_marginTop="10dp"
+                android:id="@+id/IwebsiteRevenue"
+                />
+
         </TableLayout>
     </ScrollView>
 

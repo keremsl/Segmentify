@@ -1,4 +1,8 @@
 <resources>
+    <string-array name="site_options">
+        <item>Segmentify</item>
+        <item>Your Website</item>
+    </string-array>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

@@ -16,8 +16,11 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,12 +50,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         final CardView thisMontCard = findViewById(R.id.card_interval_thisMonth);
         final CardView yesterdayCard = findViewById(R.id.card_interval_yesterday);
-        final CardView todayCard = findViewById(R.id.card_interval_today);
+        final CardView todayCard = findViewById(R.id.card_interval_today);                                                  // UPPER MENU FOR CHOOSING TIME INTERVAL //
         final TextView txtView_month = findViewById(R.id.card_interval_thisMonth_txt);
         final TextView txtView_yesterday = findViewById(R.id.card_interval_yesterday_txt);
         final TextView txtView_today = findViewById(R.id.card_interval_today_txt);
 
-        /* CARD LISTENERS FOR RETRIEVING TIME INTERVAL DATA */
+
+
+
+        /* ------------------------------- INIT DASHBOARD CONTAINERS ----------------------------- -------------- */
+
+        final ArrayList<View> sgmContainers = new ArrayList<>();
+        final ArrayList<View> websiteContainers = new ArrayList<>();
+
+        View IsegWidget = findViewById(R.id.IsgmWidget);
+        View IsegBasket = findViewById(R.id.IsgmBasket);
+        View IsegRevenue = findViewById(R.id.IsgmRevenue);
+        View IsegInteractıon = findViewById(R.id.IsgmInteraction);
+
+        View IwebsitePageView = findViewById(R.id.IwebsitePageView);
+        View IwebsiteDevice = findViewById(R.id.IwebsiteDevice);
+        View IwebsiteRevenue = findViewById(R.id.IwebsiteRevenue);
+        View IwebsiteVisitors = findViewById(R.id.IwebsiteVisitors);
+
+        sgmContainers.add(IsegBasket);
+        sgmContainers.add(IsegInteractıon);
+        sgmContainers.add(IsegRevenue);
+        sgmContainers.add(IsegWidget);
+
+        websiteContainers.add(IwebsiteDevice);
+        websiteContainers.add(IwebsitePageView);
+        websiteContainers.add(IwebsiteRevenue);
+        websiteContainers.add(IwebsiteVisitors);
+
+
+        /* -------------------------------------------------------------------------------------------------*/
+
+
+
+
+        /* -------------------------------CARD LISTENERS FOR RETRIEVING TIME INTERVAL DATA AND DESIGN UTILS---------------------------------- */
 
         thisMontCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,54 +127,61 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        /* ------------------------------------------------*/
+        /* ----------------------------------------------------------------------------------------------------*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        Spinner uppermenuspinner = findViewById(R.id.segmentifyOryourwebsite_spn);
 
-        //Calendar nextYear = Calendar.getInstance();
-        //nextYear.add(Calendar.YEAR, 1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.site_options, android.R.layout.simple_spinner_item);
 
-      //  CalendarPickerView calendar = findViewById(R.id.calendar_view);
-       // Date today = new Date();
-       // calendar.init(today, nextYear.getTime())
-         //       .inMode(new Date())
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        uppermenuspinner.setAdapter(adapter);
+
+        uppermenuspinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        for (View v:
+                             sgmContainers) {
+                            v.setVisibility(View.VISIBLE);
+                        }
+
+                        for (View v:
+                                websiteContainers) {
+                            v.setVisibility(View.GONE);
+                        }
+                        break;
+                    case 1:
+                        for (View v:
+                                sgmContainers) {
+                            v.setVisibility(View.GONE);
+                        }
+
+                        for (View v:
+                                websiteContainers) {
+                            v.setVisibility(View.VISIBLE);
+                        }
+                        break;
+                }
+            }
+        });
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menu);
 
-     //   AwesomeSpinner my_spinner = (AwesomeSpinner) findViewById(R.id.material_spinner);
-      //  List<String> categories = new ArrayList<String>();
-      //  categories.add("Segmentify");
-      //  categories.add("Your Website");
 
-      // ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
-
-        //my_spinner.setAdapter(categoriesAdapter);
-       /* MaterialSpinner materialSpinner = findViewById(R.id.material_spinner);
-        materialSpinner.setItems(dashboard_spinner);
-
-        materialSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(MaterialSpinner view, int position, long id, Object item) {
-                switch (position){
-                    case 0:
-                        Toast.makeText(context,"Segmentify",Toast.LENGTH_SHORT).show();
-                        break;
-                    case 1:
-                        Toast.makeText(context,"Website",Toast.LENGTH_SHORT).show();
-                        break;
-                }
-            }
-        });
-*/
         mDrawerLayout = findViewById(R.id.drawer_layout);
         ImageView infoWidget = findViewById(R.id.info_widget);
         ImageView interactionWidget = findViewById(R.id.info_interaction);
         ImageView revenueWidget = findViewById(R.id.info_revenue);
         ImageView basketWidget = findViewById(R.id.info_basket);
+
 
         infoWidget.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,12 +237,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.nav_item_reco) {
-                Toast.makeText(context, "recos", Toast.LENGTH_SHORT).show();
-            }
-        return false;
+        if (item.getItemId() == R.id.nav_item_reco) {
+            Toast.makeText(context, "recos", Toast.LENGTH_SHORT).show();
         }
-
+        return false;
+    }
 
 
     private void setNavigationViewListener() {
@@ -206,5 +249,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    }
+}
 

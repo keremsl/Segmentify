@@ -18,7 +18,7 @@
         app:cardPreventCornerOverlap="true"
         app:cardBackgroundColor="#66dfca">
         <ImageView
-            android:id="@+id/website_pageview"
+            android:id="@+id/website_visitors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/info_icon"
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding ="10dp"
-            android:text="Page View"
+            android:text="Revenue(Overall)"
             android:textSize="24sp"
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
@@ -44,7 +44,7 @@
             android:id="@+id/Widget_Header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="126,879"
+            android:text="12,87"
             android:textSize="28sp"
             android:paddingTop="45dp"
             android:paddingLeft="10dp"
@@ -55,18 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="views"
-            android:textSize="15sp"
-            android:paddingTop="45dp"
-            android:paddingLeft="105dp"
-            android:textColor="#bafff3"
-            app:fontFamily="@font/mont"
-            />
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Home Page"
+            android:text="Purchases"
             android:textSize="15sp"
             android:layout_gravity="start"
             android:paddingTop="90dp"
@@ -87,18 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="views"
-            android:textSize="15sp"
-            android:paddingTop="114dp"
-            android:paddingLeft="73dp"
-            android:textColor="#bafff3"
-            app:fontFamily="@font/mont"
-            />
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Product Page"
+            android:text="Purchased Products"
             android:textSize="15sp"
             android:layout_gravity="start"
             android:paddingTop="140dp"
@@ -119,18 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="views"
-            android:textSize="15sp"
-            android:paddingTop="165dp"
-            android:paddingStart="73dp"
-            android:textColor="#bafff3"
-            app:fontFamily="@font/mont"
-            />
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Category Page"
+            android:text="Average Basket Value"
             android:textSize="15sp"
             android:layout_gravity="right"
             android:paddingTop="90dp"
@@ -154,18 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="views"
-            android:textSize="15sp"
-            android:paddingTop="114dp"
-            android:paddingLeft="200dp"
-            android:textColor="#bafff3"
-            app:fontFamily="@font/mont"
-            />
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Other Pages"
+            android:text="Success Page View"
             android:textSize="15sp"
             android:layout_gravity="right"
             android:paddingTop="140dp"
@@ -185,17 +141,7 @@
             android:textColor="@android:color/white"
             app:fontFamily="@font/mont"
             />
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="views"
-            android:textSize="15sp"
-            android:paddingTop="165dp"
-            android:paddingLeft="200dp"
-            android:textColor="#bafff3"
-            app:fontFamily="@font/mont"
-            />
+
     </android.support.v7.widget.CardView>
 
 
