@@ -1,6 +1,7 @@
 package segmentify.app.segmentify.feature;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.icu.util.Calendar;
@@ -25,9 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.isapanah.awesomespinner.AwesomeSpinner;
-import com.jaredrummler.materialspinner.MaterialSpinner;
-import com.squareup.timessquare.CalendarPickerView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -141,13 +139,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         uppermenuspinner.setAdapter(adapter);
 
-        uppermenuspinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        uppermenuspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
                         for (View v:
-                             sgmContainers) {
+                                sgmContainers) {
                             v.setVisibility(View.VISIBLE);
                         }
 
@@ -168,6 +166,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         }
                         break;
                 }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
@@ -238,8 +241,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.nav_item_reco) {
-            Toast.makeText(context, "recos", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, RecoActivity.class);
+            startActivity(i);
+        } else if(item.getItemId() == R.id.nav_item_dashboard){
+            //frggsgsas
         }
+
         return false;
     }
 

@@ -26,7 +26,7 @@
         android:text="Kerem Ceylan"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:textColor="@color/md_white_1000"
+        android:textColor="@color/calendar_text_active"
         android:textSize="15sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
     <TextView
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:text="mehmetkeremceylan@gmail.com"
         android:layout_marginTop="5dp"
-        android:textColor="@color/md_white_1000"
+        android:textColor="@color/calendar_text_active"
         android:textSize="12sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 

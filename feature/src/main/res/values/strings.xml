@@ -49,4 +49,7 @@
         <b>"Average Contribution</b>: Shows Segmentify Recommendation Widgets’ average amount of contribution to the basket. If a visitor clicks to a $100 priced product from a recommendation widget and buys that item, Segmentify’s contribution is increased by $100.\n"
         <b>"Basket Rate</b>: Shows the ratio between the number of products that are added to the basket and the the number of products that are clicked through the recommendation widgets. It is calculated by dividing Products Added to the Basket to Products Clicked\n"
         "If this ratio is low, you should consider updating the recommendation types and filters of the products to create the best match for visitor’s preferences.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
