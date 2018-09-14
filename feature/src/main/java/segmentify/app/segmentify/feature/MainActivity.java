@@ -20,6 +20,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
@@ -38,14 +40,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     Context context = this;
     private DrawerLayout mDrawerLayout;
-
-
+    ListView _listview = null; // Reco list for this account
+    ScrollView scrollView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
         setNavigationViewListener();
-
+         _listview = findViewById(R.id.recoLa); // Reco list for this account
+        scrollView = findViewById(R.id.base);
         final CardView thisMontCard = findViewById(R.id.card_interval_thisMonth);
         final CardView yesterdayCard = findViewById(R.id.card_interval_yesterday);
         final CardView todayCard = findViewById(R.id.card_interval_today);                                                  // UPPER MENU FOR CHOOSING TIME INTERVAL //
@@ -225,6 +228,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .show();
             }
         });
+
+
+
+        List<Recommendation> _recos = new ArrayList<>(); // All Recos
+
+        List<Recommendation> _liveRecos = new ArrayList<>();
+        List<Recommendation> _testRecos = new ArrayList<>();
+
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+        _recos.add(new Recommendation(new Date(),"Example Reco - scn12431","Example Reco"));
+
+        RecommendationAdapter recommendationAdapter = new RecommendationAdapter(this, R.layout.reco_template, _recos);
+
+        _listview.setAdapter(recommendationAdapter);
     }
 
     @Override
@@ -241,10 +264,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.nav_item_reco) {
-            Intent i = new Intent(MainActivity.this, RecoActivity.class);
-            startActivity(i);
+            _listview.setVisibility(View.VISIBLE);
+            scrollView.setVisibility(View.GONE);
+            mDrawerLayout.closeDrawers();
         } else if(item.getItemId() == R.id.nav_item_dashboard){
-            //frggsgsas
+            _listview.setVisibility(View.GONE);
+            scrollView.setVisibility(View.VISIBLE);
+            mDrawerLayout.closeDrawers();
         }
 
         return false;
